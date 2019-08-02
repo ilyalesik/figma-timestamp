@@ -1,0 +1,16 @@
+<h2>Clock Creator</h2>
+<p>Count: <input id="format" value="ddd D MMM HH:MM"></p>
+<button id="create">Create</button>
+<button id="cancel">Cancel</button>
+<script>
+
+document.getElementById('create').onclick = () => {
+  const textbox = document.getElementById('format');
+  parent.postMessage({ pluginMessage: { type: 'create-clock', format: textbox.value } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script>
