@@ -24,7 +24,7 @@
     "@types/node": "^12.6.9",
     "@types/react": "^16.8.24",
     "date-fns": "^1.30.1",
-    "figma-ui-components": "0.0.3",
+    "figma-ui-components": "0.0.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
