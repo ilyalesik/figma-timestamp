@@ -4,7 +4,8 @@
   "description": "Figma clock plugin",
   "main": "index.js",
   "scripts": {
-    "tscw": "tsc -p tsconfig.json -w"
+    "webpack:watch": "webpack --watch",
+    "tsc": "tsc -p tsconfig.json"
   },
   "author": "Ilya Lesik <ilialesik@gmail.com>",
   "license": "MIT",
