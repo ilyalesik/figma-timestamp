@@ -1,5 +1,5 @@
 {
-  "name": "Clock",
+  "name": "Timestamp",
   "id": "738847008807187575",
   "api": "1.0.0",
   "main": "dist/code.js",

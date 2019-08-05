@@ -1,6 +1,8 @@
 import {format} from 'date-fns'
 
-figma.showUI(__html__);
+figma.showUI(__html__, {
+    height: 156
+});
 
 const font = {family: "Roboto", style: "Regular"};
 
