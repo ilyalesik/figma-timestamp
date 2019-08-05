@@ -1,5 +1,20 @@
 import * as React from 'react'
-import {PrimaryButton, SecondaryButton} from "figma-ui-components"
+import styled from "styled-components";
+import {PrimaryButton, SecondaryButton, InputWithIcon, AdjustIcon, Input, SectionTitle, Divider} from "figma-ui-components"
+
+const SectionContainer = styled.div`
+    padding: 8px;
+`;
+
+const ButtonsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    & > * + * {
+        margin-left: 8px;
+    }
+`;
 
 export const Form = () => {
     const [value, setValue] = React.useState("ddd D MMM HH:MM");
@@ -12,9 +27,17 @@ export const Form = () => {
         parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
     };
     return <div>
-        <h2>Clock Creator</h2>
-        <p>Format: <input id="format" value={value} onChange={(e) => setValue(e.target.value)} /></p>
-        <PrimaryButton onClick={onCreate}>Create</PrimaryButton>
-        <SecondaryButton onClick={onCancel}>Cancel</SecondaryButton>
+        <SectionContainer>
+            <SectionTitle>Format</SectionTitle>
+            <InputWithIcon icon={<AdjustIcon />} input={<Input value={value} onChange={(e) => setValue(e.target.value)} />} />
+        </SectionContainer>
+        <Divider />
+        <SectionContainer>
+            <ButtonsContainer>
+                <SecondaryButton onClick={onCancel}>Cancel</SecondaryButton>
+                <PrimaryButton onClick={onCreate}>Create</PrimaryButton>
+            </ButtonsContainer>
+        </SectionContainer>
+
     </div>
 };
