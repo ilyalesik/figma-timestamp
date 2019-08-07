@@ -1,7 +1,7 @@
 {
-  "name": "figma-clock",
+  "name": "figma-timestamp",
   "version": "0.0.0",
-  "description": "Figma clock plugin",
+  "description": "Figma timestamp plugin",
   "main": "index.js",
   "scripts": {
     "webpack:watch": "webpack --watch",
