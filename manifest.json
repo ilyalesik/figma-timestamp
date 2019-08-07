@@ -3,5 +3,9 @@
   "id": "738847008807187575",
   "api": "1.0.0",
   "main": "dist/code.js",
-  "ui": "dist/ui.html"
+  "ui": "dist/ui.html",
+  "menu": [
+    {"name": "Add new timestamp", "command": "add-new"},
+    {"name": "Update all timestamps", "command": "update-all"}
+  ]
 }
