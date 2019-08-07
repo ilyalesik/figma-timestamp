@@ -17,7 +17,7 @@ const ButtonsContainer = styled.div`
 `;
 
 export const Form = () => {
-    const [value, setValue] = React.useState("ddd D MMM HH:MM");
+    const [value, setValue] = React.useState("ddd D MMM HH:mm");
 
     const onCreate = () => {
         parent.postMessage({ pluginMessage: { type: 'create-clock', format: value } }, '*')
